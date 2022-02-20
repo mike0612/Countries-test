@@ -1,0 +1,10 @@
+<app-loader *ngIf="loading"></app-loader>
+
+<app-filter
+  (submitted)="onTerm($event)"
+  (filteredDropdown)="onDropdown($event)"
+></app-filter>
+
+<ng-container *ngIf="!loading">
+  <app-cards [list]="list"></app-cards>
+</ng-container>

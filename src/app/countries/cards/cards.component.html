@@ -1,0 +1,37 @@
+<div class="container">
+  <div
+    class="cards-wrapper-dark d-flex flex-wrap align-items-center justify-content-around"
+  >
+    <ng-container *ngFor="let item of list">
+      <div class="mb-5">
+        <div
+          class="card"
+          style="width: 15rem;"
+          [routerLink]="['country/', item.name]"
+        >
+          <div class="img-container">
+            <img
+              class="card-img-top"
+              src="{{ item.flag }}"
+              alt="Card image cap"
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{ item.name }}</h5>
+          </div>
+          <ul class="list-group list-group-flush mb-5">
+            <li class="list-group-item">
+              <strong>Population : </strong><span>{{ item.population }}</span>
+            </li>
+            <li class="list-group-item">
+              <strong>Region : </strong> <span>{{ item.region }}</span>
+            </li>
+            <li class="list-group-item">
+              <strong>Captial : </strong> <span>{{ item.capital }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

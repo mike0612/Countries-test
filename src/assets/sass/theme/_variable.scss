@@ -1,0 +1,38 @@
+//Dark Mode
+$dark-header: #2b3743;
+$dark-background: #202d36;
+$dark-item: #2b3743;
+$dark-font-color: #ffffff;
+
+//light Mode
+$light-header: #ffffff;
+$light-background: #fafafa;
+$light-item: #fafafa;
+$light-font-color: #000000;
+
+//theme
+.dark-theme {
+  $header: $dark-header;
+  $background: $dark-background;
+  $item: $dark-item;
+  $font-color: $dark-font-color;
+}
+
+.light-theme {
+  $header: $light-header;
+  $background: $light-background;
+  $item: $light-item;
+  $font-color: $light-font-color;
+}
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;

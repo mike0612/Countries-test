@@ -1,0 +1,105 @@
+// Dropdown shadow
+$dropdown-shadow: 0px 0px 50px 0px rgba(82, 63, 105, 0.15) !default;
+
+.dark-dropdown-btn {
+  background: #2b3743;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 3px;
+  width: 160px;
+  height: 41px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:focus {
+    outline: none !important;
+
+    a > svg {
+      transform: rotate(180deg);
+      transition: all 0.3s;
+    }
+  }
+
+  &::after {
+    display: none !important;
+  }
+
+  span {
+    font-size: 0.8rem;
+    letter-spacing: 0.3px;
+  }
+
+  a > svg {
+    width: 0.6rem;
+    transform: rotate(0deg);
+
+    path {
+      fill: #fff;
+    }
+  }
+}
+
+.dark-dropdown-options {
+  background-color: #2b3743;
+  color: #fff;
+
+  &-option {
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 0.8rem;
+
+    &:hover,
+    &:focus {
+      color: #2b3743;
+      outline: none;
+      background-color: #fff;
+    }
+  }
+}
+
+.dropdown-menu {
+  border: 0 !important;
+  margin: 0;
+  border-radius: 0;
+  min-width: 100%;
+  padding: 0;
+  box-shadow: $dropdown-shadow;
+  padding: 0.5rem 0;
+  border-radius: 3px;
+}
+
+.dropdown-menu-anim {
+  animation: dropdown-menu-fade-in 0.3s ease 1,
+    dropdown-menu-move-up 0.4s ease-out 1;
+}
+
+// Animations
+@keyframes dropdown-menu-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes dropdown-menu-move-down {
+  from {
+    margin-top: -10px;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+
+@keyframes dropdown-menu-move-up {
+  from {
+    margin-top: 20px;
+  }
+  to {
+    margin-top: 0;
+  }
+}

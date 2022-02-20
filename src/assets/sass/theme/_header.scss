@@ -1,0 +1,48 @@
+.header {
+  background-color: $dark-header;
+  padding: 20px 0;
+
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    @include sm {
+      align-items: center;
+    }
+
+    &-title {
+      font-size: 1.4rem;
+      color: $dark-font-color;
+      font-weight: 700;
+
+      @include sm {
+        font-size: 0.8rem;
+      }
+    }
+
+    &-theme {
+      display: flex;
+      padding: 2px;
+
+      img {
+        width: 13px;
+        margin: 0 5px;
+
+        @include sm {
+          width: 10px;
+        }
+      }
+      p {
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: $dark-font-color;
+        margin: 0 5px;
+
+        @include sm {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
